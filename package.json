@@ -1,0 +1,72 @@
+{
+	"name": "gherkin-feature-linter",
+	"author": {
+		"name": "Adam Pike"
+	},
+	"publisher": "AdamPike",
+	"displayName": "Gherkin Feature Linter",
+	"description": "Cucumber feature file validator for Gherkin syntax correctness and Cucumber parsability",
+	"homepage": "https://github.com/AdamPike/vscode-feature-lint",
+	"version": "0.0.1",
+	"license": "ISC",
+	"engines": {
+		"vscode": "^1.36.0"
+	},
+	"categories": [
+		"Linters"
+	],
+	"activationEvents": [
+		"onCommand:extension.featureLint"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"title": "Feature Lint",
+				"command": "extension.featureLint"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.featureLint",
+					"alt": "markdown.showPreviewToSide",
+					"group": "z_commands"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"command": "extension.featureLint",
+				"key": "shift+ctrl+l",
+				"mac": "shift+ctrl+l"
+			}
+		]
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.36.0",
+		"eslint": "^5.13.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.0.2",
+		"@babel/cli": "7.4.4",
+		"@babel/core": "7.4.4",
+		"@babel/preset-env": "7.4.4",
+		"chai": "4.1.2",
+		"commander": "2.18.0",
+		"coveralls": "3.0.3",
+		"gherkin": "5.1.0",
+		"lodash": "4.17.14",
+		"mocha-sinon": "2.1.0",
+		"mock-fs": "4.9.0",
+		"nyc": "14.0.0",
+		"sinon": "6.2.0"
+	}
+}
