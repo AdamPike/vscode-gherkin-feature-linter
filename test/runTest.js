@@ -1,6 +1,7 @@
 const path = require('path');
 
 const { runTests } = require('vscode-test');
+const testWorkspace = path.resolve(__dirname, 'testData/MyFeature.feature')
 
 async function main() {
 	try {
@@ -13,7 +14,7 @@ async function main() {
 		const extensionTestsPath = path.resolve(__dirname, './suite/index');
 
 		// Download VS Code, unzip it and run the integration test
-		await runTests({ extensionDevelopmentPath, extensionTestsPath });
+		await runTests({ extensionDevelopmentPath, extensionTestsPath, launchArgs: [testWorkspace]});
 	} catch (err) {
 		console.error('Failed to run tests');
 		process.exit(1);

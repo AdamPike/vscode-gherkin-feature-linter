@@ -4,15 +4,35 @@ const { before } = require('mocha');
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
 const vscode = require('vscode');
-// const myExtension = require('../extension');
+const myExtension = require('../../extension.js');
+var linter = require('../../../gherkin_linter.js');
 
 suite('Extension Test Suite', () => {
 	before(() => {
 		vscode.window.showInformationMessage('Start all tests.');
+		//vscode.window.activeTextEditor.document.
+		vscode.commands.executeCommand('extension.featureLint');
+		sleep(10000);
+
 	});
 
-	test('Sample test', () => {
-		assert.equal(-1, [1, 2, 3].indexOf(5));
-		assert.equal(-1, [1, 2, 3].indexOf(0));
+	test('Execute Feature Lint command', () => {
+		var actual = linter.lint(['test/linter/MultipleBackgrounds.feature']);
+		var expected = [{
+			'line': '9',
+			'message': 'Multiple "Background" definitions in the same file are disallowed',
+			'rule': 'up-to-one-background-per-file'
+		}];
+		assert.lengthOf(actual, 1);
+		assert.deepEqual(actual[0].errors, expected);
 	});
 });
+
+function sleep(milliseconds) {
+	var start = new Date().getTime();
+	for (var i = 0; i < 1e7; i++) {
+		if ((new Date().getTime() - start) > milliseconds) {
+			break;
+		}
+	}
+}
