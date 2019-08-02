@@ -6,7 +6,7 @@
 	"publisher": "AdamPike",
 	"displayName": "Gherkin Feature Linter",
 	"description": "Cucumber feature file validator for Gherkin syntax correctness and Cucumber parsability",
-	"homepage": "https://github.com/AdamPike/vscode-feature-lint",
+	"homepage": "https://github.com/AdamPike/vscode-gherkin-feature-linter",
 	"version": "0.0.1",
 	"license": "ISC",
 	"engines": {
@@ -15,6 +15,11 @@
 	"categories": [
 		"Linters"
 	],
+	"icon": "https://github.com/AdamPike/vscode-gherkin-feature-linter/blob/master/cuke.png",
+	"galleryBanner": {
+		"color": "#C80000",
+		"theme": "dark"
+	},
 	"activationEvents": [
 		"onCommand:extension.featureLint"
 	],

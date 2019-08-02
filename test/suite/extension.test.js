@@ -17,12 +17,6 @@ suite('Extension Test Suite', () => {
 	});
 
 	test('Execute Feature Lint command', () => {
-		var actual = linter.lint(['test/linter/MultipleBackgrounds.feature']);
-		var expected = [{
-			'line': '9',
-			'message': 'Multiple "Background" definitions in the same file are disallowed',
-			'rule': 'up-to-one-background-per-file'
-		}];
 		assert.lengthOf(actual, 1);
 		assert.deepEqual(actual[0].errors, expected);
 	});
