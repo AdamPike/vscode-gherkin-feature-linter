@@ -23,7 +23,7 @@
 	"activationEvents": [
 		"onCommand:extension.featureLint"
 	],
-	"main": "./extension.js",
+	"main": "src/extension.js",
 	"contributes": {
 		"commands": [
 			{

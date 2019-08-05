@@ -3,13 +3,13 @@
 
 var program = require('commander');
 
-var linter = require('./src/gherkin-lint/linter.js');
+var linter = require('./gherkin-lint/linter.js');
 
-var verifyConfig = require('./src/gherkin-lint/config-verifier');
+var verifyConfig = require('./gherkin-lint/config-verifier');
 
-var logger = require('./src/gherkin-lint/logger.js');
+var logger = require('./gherkin-lint/logger.js');
 
-var formatter = require('./src/gherkin-lint/formatters/stylish.js');
+var formatter = require('./gherkin-lint/formatters/stylish.js');
 
 var jsonConfig = {
     "allowed-tags": ["off", { "tags": ["@watch", "@wip", "@todo"] }],

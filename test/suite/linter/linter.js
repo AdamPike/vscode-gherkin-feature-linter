@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var linter = require('../../../gherkin_linter.js');
+var linter = require('../../../src/gherkin_linter');
 const path = require('path');
 
 describe('Linter', function () {
