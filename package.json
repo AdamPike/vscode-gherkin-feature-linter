@@ -15,7 +15,7 @@
 	"categories": [
 		"Linters"
 	],
-	"icon": "https://github.com/AdamPike/vscode-gherkin-feature-linter/blob/master/cuke.png",
+	"icon": "https://github.com/AdamPike/vscode-gherkin-feature-linter/blob/master/cukeLint.png",
 	"galleryBanner": {
 		"color": "#C80000",
 		"theme": "dark"
