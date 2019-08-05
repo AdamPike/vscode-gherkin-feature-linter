@@ -62,7 +62,6 @@ describe('Linter', function () {
   it('detects additional violations that happen after the \'no-tags-on-backgrounds\' rule', function () {
     var file = path.resolve(__dirname, 'MultipleViolations.feature')
     var actual = linter.lint([file], {});
-    console.log("Actual reult was: " + actual);
     assert.include(actual[0], "13");
     assert.include(actual[0], "Steps should begin with \"Given\", \"When\", \"Then\", \"And\" or \"But\". Multiline steps are dissallowed");
     assert.include(actual[0], "no-multiline-steps");
@@ -74,7 +73,6 @@ describe('Linter', function () {
   it('correctly parses files that have the correct Gherkin format', function () {
     var file = path.resolve(__dirname, 'NoViolations.feature')
     var result = linter.lint([file], {});
-    console.log("Actual reult was: " + result);
     assert.lengthOf(result, 0);
   });
 });
