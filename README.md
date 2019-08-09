@@ -1,4 +1,4 @@
-# feature-lint README
+# Gherkin Feature Linter
 
 
 ## Features
