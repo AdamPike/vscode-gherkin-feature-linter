@@ -19,6 +19,14 @@
 	"categories": [
 		"Linters"
 	],
+	"keywords": [
+		"lint",
+		"linting",
+		"linter",
+		"gherkin",
+		"feature",
+		"cucumber"
+	],
 	"icon": "cukeLint.png",
 	"galleryBanner": {
 		"color": "#C80000",
