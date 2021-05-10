@@ -80,7 +80,7 @@
 		"commander": "2.18.0",
 		"coveralls": "3.0.3",
 		"gherkin": "5.1.0",
-		"lodash": "4.17.14",
+		"lodash": "4.17.21",
 		"mocha-sinon": "2.1.0",
 		"mock-fs": "4.9.0",
 		"nyc": "14.0.0",
